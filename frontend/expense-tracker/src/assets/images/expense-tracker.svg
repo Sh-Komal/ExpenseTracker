@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f9fa" />
+      <stop offset="100%" stop-color="#e9ecef" />
+    </linearGradient>
+    
+    <!-- Purple gradient for charts -->
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9c27b0" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#673ab7" stop-opacity="0.2" />
+    </linearGradient>
+    
+    <!-- Violet gradient for line chart -->
+    <linearGradient id="violetGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7b1fa2" />
+      <stop offset="100%" stop-color="#9c27b0" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="600" height="400" fill="url(#bgGradient)" rx="10" ry="10" />
+  
+  <!-- Decorative elements -->
+  <circle cx="50" cy="50" r="100" fill="#9c27b0" opacity="0.05" />
+  <circle cx="550" cy="350" r="100" fill="#673ab7" opacity="0.05" />
+  
+  <!-- Dashboard container -->
+  <rect x="50" y="50" width="500" height="300" fill="white" rx="10" ry="10" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.1))" />
+  
+  <!-- Header -->
+  <text x="80" y="90" font-family="Arial" font-size="22" font-weight="bold" fill="#512da8">ExpenseTracker</text>
+  
+  <!-- Bar chart -->
+  <g transform="translate(80, 120)">
+    <text x="0" y="-10" font-family="Arial" font-size="12" fill="#512da8">Monthly Expenses</text>
+    <rect x="10" y="10" width="25" height="100" fill="url(#purpleGradient)" rx="3" ry="3" />
+    <rect x="45" y="40" width="25" height="70" fill="url(#purpleGradient)" rx="3" ry="3" />
+    <rect x="80" y="20" width="25" height="90" fill="url(#purpleGradient)" rx="3" ry="3" />
+    <rect x="115" y="60" width="25" height="50" fill="url(#purpleGradient)" rx="3" ry="3" />
+    <rect x="150" y="30" width="25" height="80" fill="url(#purpleGradient)" rx="3" ry="3" />
+    
+    <!-- X-axis labels (smaller and properly spaced) -->
+    <text x="22" y="120" font-family="Arial" font-size="9" fill="#673ab7" text-anchor="middle">Jan</text>
+    <text x="57" y="120" font-family="Arial" font-size="9" fill="#673ab7" text-anchor="middle">Feb</text>
+    <text x="92" y="120" font-family="Arial" font-size="9" fill="#673ab7" text-anchor="middle">Mar</text>
+    <text x="127" y="120" font-family="Arial" font-size="9" fill="#673ab7" text-anchor="middle">Apr</text>
+    <text x="162" y="120" font-family="Arial" font-size="9" fill="#673ab7" text-anchor="middle">May</text>
+  </g>
+  
+  <!-- Line chart -->
+  <g transform="translate(320, 120)">
+    <text x="0" y="-10" font-family="Arial" font-size="12" fill="#512da8">Savings Trend</text>
+    <polyline points="0,80 40,60 80,65 120,40 160,30" fill="none" stroke="url(#violetGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="0" cy="80" r="4" fill="#9c27b0" />
+    <circle cx="40" cy="60" r="4" fill="#9c27b0" />
+    <circle cx="80" cy="65" r="4" fill="#9c27b0" />
+    <circle cx="120" cy="40" r="4" fill="#9c27b0" />
+    <circle cx="160" cy="30" r="4" fill="#9c27b0" />
+  </g>
+  
+  <!-- Transactions list (adjusted spacing and sizing) -->
+  <g transform="translate(80, 260)">
+    <text x="0" y="-5" font-family="Arial" font-size="12" fill="#512da8">Recent Transactions</text>
+    
+    <rect x="0" y="10" width="180" height="18" fill="#f3e5f5" rx="3" ry="3" />
+    <text x="5" y="23" font-family="Arial" font-size="9" fill="#7b1fa2">Grocery Shopping</text>
+    <text x="175" y="23" font-family="Arial" font-size="9" fill="#7b1fa2" text-anchor="end">-$45.80</text>
+    
+    <rect x="0" y="33" width="180" height="18" fill="#f3e5f5" rx="3" ry="3" />
+    <text x="5" y="46" font-family="Arial" font-size="9" fill="#7b1fa2">Transport</text>
+    <text x="175" y="46" font-family="Arial" font-size="9" fill="#7b1fa2" text-anchor="end">-$25.50</text>
+    
+    <rect x="0" y="56" width="180" height="18" fill="#f3e5f5" rx="3" ry="3" />
+    <text x="5" y="69" font-family="Arial" font-size="9" fill="#7b1fa2">Income</text>
+    <text x="175" y="69" font-family="Arial" font-size="9" fill="#7b1fa2" text-anchor="end">+$1,200</text>
+  </g>
+  
+  <!-- Pie chart (adjusted spacing and sizing) -->
+  <g transform="translate(320, 260)">
+    <text x="0" y="-5" font-family="Arial" font-size="12" fill="#512da8">Expense Categories</text>
+    
+    <!-- Pie chart (slightly smaller) -->
+    <g transform="translate(0, 10) scale(0.9)">
+      <path d="M 80 50 L 80 0 A 50 50 0 0 1 123.3 19.1 z" fill="#9c27b0" />
+      <path d="M 80 50 L 123.3 19.1 A 50 50 0 0 1 123.3 80.9 z" fill="#7b1fa2" />
+      <path d="M 80 50 L 123.3 80.9 A 50 50 0 0 1 36.7 80.9 z" fill="#673ab7" />
+      <path d="M 80 50 L 36.7 80.9 A 50 50 0 0 1 36.7 19.1 z" fill="#5e35b1" />
+      <path d="M 80 50 L 36.7 19.1 A 50 50 0 0 1 80 0 z" fill="#512da8" />
+    </g>
+    
+    <!-- Legend (more compact) -->
+    <rect x="150" y="10" width="8" height="8" fill="#9c27b0" />
+    <text x="162" y="17" font-family="Arial" font-size="9" fill="#512da8">Housing</text>
+    
+    <rect x="150" y="25" width="8" height="8" fill="#7b1fa2" />
+    <text x="162" y="32" font-family="Arial" font-size="9" fill="#512da8">Food</text>
+    
+    <rect x="150" y="40" width="8" height="8" fill="#673ab7" />
+    <text x="162" y="47" font-family="Arial" font-size="9" fill="#512da8">Transport</text>
+    
+    <rect x="150" y="55" width="8" height="8" fill="#5e35b1" />
+    <text x="162" y="62" font-family="Arial" font-size="9" fill="#512da8">Bills</text>
+    
+    <rect x="150" y="70" width="8" height="8" fill="#512da8" />
+    <text x="162" y="77" font-family="Arial" font-size="9" fill="#512da8">Other</text>
+  </g>
+</svg>
