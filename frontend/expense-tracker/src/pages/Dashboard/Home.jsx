@@ -11,7 +11,7 @@ import RecentTransactions from '../../components/Dashboard/RecentTransactions';
 import { useNavigate } from 'react-router-dom';
 import FinanceOverView from '../../components/Dashboard/FinanceOverView';
 import ExpenseTransaction from '../../components/Dashboard/ExpenseTransaction';
-import Last30DaysExpenses from '../../components/Dashboard/last30DaysExpenses';
+import Last30DaysExpenses from '../../components/Dashboard/Last30DaysExpenses';
 import RecentIncomewithChart from '../../components/Dashboard/RecentIncomewithChart';
 import RecentIncome from '../../components/Dashboard/RecentIncome';
 
