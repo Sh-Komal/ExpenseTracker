@@ -17,7 +17,7 @@ app.use(cors({
     // origin: process.env.CLIENT_URL || "*", 
     origin: [
         "http://localhost:5173", 
-        // "https://teri-frontend-website.vercel.app"
+        "https://expense-tracker-sand-theta.vercel.app"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
