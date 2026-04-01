@@ -14,7 +14,11 @@ const app = express();
 // Middlewares to hnadle Cors 
 
 app.use(cors({
-    origin: process.env.CLIENT_URL || "*", 
+    // origin: process.env.CLIENT_URL || "*", 
+    origin: [
+        "http://localhost:5173", 
+        // "https://teri-frontend-website.vercel.app"
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
@@ -34,6 +38,6 @@ app.use('/api/v1/dashboard', dashboardRoutes)
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
